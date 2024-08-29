@@ -5,23 +5,32 @@
 项目结构大概分为
 1.数据导入层：支持格式JSON（目前不打算拓展其他格式）
 数据规范（JSON）：
-### Vocabulary List
-
-1. **Example**
-   - **Part of Speech**: Noun
-   - **Definition**: A representative form or pattern
-
-2. **Elaborate**
-   - **Part of Speech**: Adjective
-   - **Definition**: Involving many careful details
-
-3. **Facilitate**
-   - **Part of Speech**: Verb
-   - **Definition**: To make (an action or process) easy or easier
-
-4. **Meticulous**
-   - **Part of Speech**: Adjective
-   - **Definition**: Showing great attention to detail; very careful and precise
+```json
+{
+  "words": [
+    {
+      "word": "example",
+      "definition": "a representative form or pattern",
+      "partOfSpeech": "noun"
+    },
+    {
+      "word": "elaborate",
+      "definition": "involving many careful details",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "word": "facilitate",
+      "definition": "to make (an action or process) easy or easier",
+      "partOfSpeech": "verb"
+    },
+    {
+      "word": "meticulous",
+      "definition": "showing great attention to detail; very careful and precise",
+      "partOfSpeech": "adjective"
+    }
+  ]
+}
+```
 
 （这里的words也可以是其他名字，只要是A:[{a},{b}]）类似的形式就行）
 导入之后，自动在每一个最小单位的元素（word）中添加
