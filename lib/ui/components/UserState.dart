@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import '../page/DataPage.dart';
+import '../page/MainPage.dart';
 
-class Menu extends StatelessWidget {
-  const Menu({super.key});
+class UserState extends StatelessWidget {
+  const UserState({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -12,8 +12,8 @@ class Menu extends StatelessWidget {
     final screenHeight = MediaQuery.of(context).size.height;
 
     return Container(
-      width: 240 * screenWidth / 1264,
-      height: 60 * screenHeight / 681,
+      width: 260,
+      height: 60,
       decoration: BoxDecoration(
         color: primaryColor,
         borderRadius: BorderRadius.circular(15),
@@ -26,8 +26,8 @@ class Menu extends StatelessWidget {
             children: [
               // 圆形图片容器
               Container(
-                width: 40 * screenWidth / 1264,
-                height: 40 * screenHeight / 681,
+                width: 45,
+                height: 45,
                 decoration: const BoxDecoration(
                   shape: BoxShape.circle,
                   image: DecorationImage(
@@ -37,37 +37,37 @@ class Menu extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                width: 10 * screenWidth / 1264,
+                width: screenWidth / 126.4,
               ), // 图片和文本之间的间距
 
               // 文本
               Text(
                 'Ru_Meng_OvO',
                 style: TextStyle(
-                    fontSize: 16 * screenWidth / 1264 * screenHeight / 681,
+                    fontSize: 16,
                     color: Color(0xFFf3f3f3),
                     decoration: TextDecoration.none),
               ),
               SizedBox(
-                width: 10 * screenWidth / 1264,
+                width: screenWidth / 126.4,
               ), // 文本和按钮之间的间距
 
               // 按钮
               SizedBox(
-                width: 40 * screenWidth / 1264,
-                height: 20 * screenHeight / 681,
+                width: 60,
+                height: 30,
                 child: ElevatedButton(
                   onPressed: () {
                     debugPrint('按钮被点击');
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Datapage()));
                   },
                   style: ElevatedButton.styleFrom(
                     padding: EdgeInsets.zero, // 去除按钮内边距
                   ),
                   child: Text(
                     '更多',
-                    style: TextStyle(
-                        fontSize: 10 * screenWidth / 1264 * screenHeight / 681,
-                        color: Colors.blue),
+                    style: TextStyle(fontSize: 10, color: primaryColor),
                   ),
                 ),
               ),

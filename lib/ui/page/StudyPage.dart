@@ -13,7 +13,7 @@ class StudyPage extends StatelessWidget {
           Positioned(
               top: screenWidth * 0.02,
               right: screenWidth * 0.02,
-              child: Menu()),
+              child: UserState()),
           Center(
             child: Container(
               margin: EdgeInsets.only(top: screenHeight * 0.15),

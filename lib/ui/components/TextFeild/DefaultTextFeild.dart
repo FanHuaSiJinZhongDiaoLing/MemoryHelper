@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:memory_helper001/ui/page/DataAddPage.dart';
+import 'package:memory_helper001/ui/page/DataAddArea.dart';
 
 class TitleInputFeild extends StatelessWidget {
   @override

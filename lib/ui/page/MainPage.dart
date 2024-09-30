@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:memory_helper001/ui/page/DataManageArea.dart';
 import 'StudyPage.dart';
-import 'DataAddPage.dart';
+import 'DataAddArea.dart';
+import 'DBAddArea.dart';
 
 class Datapage extends StatelessWidget {
   @override
@@ -24,8 +26,8 @@ class _ScaffoldWithNavigationRailState
   // 页面列表
   final List<Widget> _pages = [
     StudyPage(),
-    Dataaddpage.DataAddPage(),
-    Center(child: Text('知识库管理', style: TextStyle(fontSize: 24))),
+    DatabaseAddArea(),
+    DatabaseManageArea(),
     Center(child: Text('偏好设置', style: TextStyle(fontSize: 24))),
   ];
 
